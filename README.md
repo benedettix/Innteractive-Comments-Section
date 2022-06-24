@@ -2,6 +2,8 @@
 
 ![Design preview for the Interactive comments section coding challenge](./design/desktop-preview.jpg)
 
+I could use localstorage but i forgot never mind...
+
 ## Welcome! 👋
 
 Thanks for checking out this front-end coding challenge.
