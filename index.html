@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="app/css/style.css">
+  <script defer src="app/js/comments.js"></script>
+  <script defer src="app/js/model.js"></script>
+  <title>Frontend Mentor | Interactive comments section</title>
+</head>
+
+<body>
+  <div class="container">
+    <!-- POSTED COMMMENT -->
+    <!-- <div class="post" data-id="0">
+      <div class="post__vote">
+        <a href="#">+</a>
+        <p>12</p>
+        <a href="#">-</a>
+      </div>
+      <div class="post__body">
+        <div class="user__tools">
+          <div class="user">
+            <img src="images\avatars\image-amyrobson.png" alt="avatar">
+            <span><b>amyrobson</b></span><span>1 month ago</span>
+          </div>
+          <div class="tool">
+            <a href="#" id="reply-btn">↩ Reply</a>
+          </div>
+        </div>
+        <div class="desc">
+          <p>Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've
+            nailed the design and the responsiveness at various breakpoints works really well.</p>
+        </div>
+      </div>
+
+    </div> -->
+    <!-- POSTED COMMMENT -->
+    <!-- REPLY COMMENT -->
+    <!-- <div class="reply">
+      <img src="images\avatars\image-juliusomo.png" alt="avatar">
+      <textarea placeholder="Add a reply..." name="reply-comment" id="reply-comment"></textarea>
+      <button id="reply">REPLY</button>
+    </div> -->
+    <!-- REPLY COMMENT -->
+    <!-- POSTED REPLY COMMENT -->
+    <!-- <div class="added">
+      <div class="line"></div>
+      <div class="post">
+        <div class="post__vote">
+          <a href="#">+</a>
+          <p>12</p>
+          <a href="#">-</a>
+        </div>
+        <div class="post__body">
+          <div class="user__tools">
+            <div class="user">
+              <img src="images\avatars\image-amyrobson.png" alt="avatar">
+              <span><b>amyrobson</b></span><span>1 month ago</span>
+            </div>
+            <div class="tool">
+              <a href="#">↩ Reply</a>
+            </div>
+          </div>
+          <div class="desc">
+            <p>Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've
+              nailed the design and the responsiveness at various breakpoints works really well.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="reply">
+        <img src="images\avatars\image-juliusomo.png" alt="avatar">
+        <textarea placeholder="Add a reply..." name="reply-comment" id="reply-comment"></textarea>
+        <button id="reply">REPLY</button>
+      </div>
+
+    </div> -->
+    <!-- POSTED REPLY COMMENT -->
+    <!-- SEND -->
+    <div class="send"> <img src="images\avatars\image-juliusomo.png" alt="avatar">
+      <textarea placeholder="Add a comment..." name="send-comment" id="send-comment"></textarea>
+      <button id="send">SEND</button>
+    </div>
+    <div class="error"></div>
+    <!-- SEND -->
+    <!-- IF IS IT MY ACCOUNT  COMMENT-->
+    <!-- <div class="post">
+      <div class="post__vote">
+        <a href="#">+</a>
+        <p>12</p>
+        <a href="#">-</a>
+      </div>
+      <div class="post__body">
+        <div class="user__tools">
+          <div class="user">
+            <img src="images\avatars\image-amyrobson.png" alt="avatar">
+            <span><b>amyrobson</b></span><span class="you">you</span><span>1 month ago</span>
+          </div>
+          <div class="tool">
+            <a href="#" id="delete"><img src="images/icon-delete.svg" alt="del">Delete</a>
+            <a href="#" id="edit"><img src="images/icon-edit.svg" alt="edit">Edit</a>
+          </div>
+        </div>
+        <div class="desc">
+          <p>Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've
+            nailed the design and the responsiveness at various breakpoints works really well.</p>
+        </div>
+      </div>
+    </div>
+
+
+    IF IS IT MY ACCOUNT COMMENT -->
+  </div>
+  <!-- delete modal(not'included it) -->
+  <div class="modal__holder">
+    <div class="modal">
+      <h3>Delete comment</h3>
+      <p>Are you sure you want to delete this comment? This will remove the comment and can't be undone.</p>
+      <button onclick="closeModal()" id="modal-no">NO, CANCEL</button>
+      <button id="deleteIt">YES, DELETE</button>
+    </div>
+  </div>
+  <!-- delete modal -->
+  <div class="overlay"></div>
+  <!-- GIVE TO BODY OVERFLOW HIDDEN -->
+  <div class="attribution"> Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend
+      Mentor</a>. Coded by <a href="#">Your Name Here</a>. </div>
+</body>
+
+</html>

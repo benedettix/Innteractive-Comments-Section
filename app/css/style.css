@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--vLightGray);
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+}
+:root {
+   /* Primay */
+    --modBlue: hsl(238, 40%, 52%);
+    --softRed:hsl(358, 79%, 66%);
+    --lighBlue:hsl(239, 57%, 85%);
+    --paleRed:hsl(357, 100%, 86%);
+   /* Neutral */
+    --darkBlue:hsl(212, 24%, 26%);
+    --grayBlue:hsl(211, 10%, 45%);
+    --lightGray:hsl(223, 19%, 93%);
+    --vLightGray:hsl(228, 33%, 97%);
+    --white:hsl(0, 0%, 100%);
+}
+a {
+    text-decoration: none;
+}
+textarea {
+    border-radius: 10px;
+    height: 80px !important;
+    padding: 10px;
+    outline: none;
+    width: 100% !important;
+    resize: none;
+}
+.container {
+    max-width: 1200px;
+    width: 60%;
+    margin: 70px auto;
+}
+.container .post{
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    width: 100%;
+    margin: 15px 0;
+    position: relative;
+}
+.post .post__vote {
+    padding: 10px;
+    background-color: var(--vLightGray);
+    text-align: center;
+    border-radius: 10px;
+    height: 100%;
+    margin-right: 16px;
+}
+.post .post__vote a, .post .post__vote p{
+    display: block;
+    font-size: 17px;
+}
+.post .post__vote a {
+    color: var(--lighBlue);
+}
+.post .post__vote a:hover {
+    color: var(--modBlue);
+}
+.post .post__vote p {
+    padding: 8px 0;
+    color: var(--modBlue);
+}
+.post .post__body {
+    color: var(--grayBlue);
+    width: 100%;
+}
+.post .post__body .user__tools {
+    display: flex;
+    justify-content: space-between;
+}
+.post .post__body .user__tools .user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+}
+.post .post__body .user__tools .user img{
+    width: 40px;
+    padding-right: 10px;
+}
+.post .post__body .user__tools .user span b {
+    color: var(--darkBlue);
+    margin-right: 10px;
+}
+.post .post__body .tool {
+    padding: 10px;
+}
+.post .post__body .tool a {
+    color: var(--modBlue);
+    font-weight: 500;
+   /* font-size: ;
+    */
+}
+.reply {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    width: 100%;
+    margin: 5px 0;
+}
+.reply img {
+    width: 40px;
+    height: 40px;
+}
+.reply textarea {
+    border-radius: 10px;
+    height: 80px;
+    padding: 10px;
+    margin: 0 20px;
+    outline: none;
+    width: 100%;
+    resize: none;
+}
+.reply button {
+    margin-left: auto;
+    height: 40px;
+    padding: 0 20px;
+    border-radius: 7px;
+    color: var(--white);
+    background-color: var(--modBlue);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+button:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+.added{
+    margin-left: 60px;
+    height: 100%;
+    position: relative;
+}
+.added .line {
+    width: 3px;
+    height: 100%;
+    background-color: var(--lightGray);
+    position: absolute;
+    left: -30px;
+}
+.send {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    width: 100%;
+    margin: 15px 0;
+}
+.send img {
+    width: 40px;
+    height: 40px;
+}
+.send textarea {
+    border-radius: 10px;
+    height: 80px;
+    padding: 10px;
+    margin: 0 20px;
+    outline: none;
+    width: 100%;
+    resize: none;
+}
+.send button {
+    margin-left: auto;
+    height: 40px;
+    padding: 0 20px;
+    border-radius: 7px;
+    color: var(--white);
+    background-color: var(--modBlue);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.you {
+    background-color: var(--modBlue);
+    color: var(--white);
+    margin-right: 10px;
+    padding: 0 5px;
+}
+.tool a {
+    margin-right: 10px;
+    cursor: pointer;
+}
+.tool a:hover {
+    opacity: 0.5;
+}
+.modal__holder {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%,-50%);
+    z-index: 3;
+    display: none;
+}
+.modal__holder .modal {
+    text-align: center;
+    color: #000000;
+    border-radius: 10px;
+    background-color: var(--white);
+    width: 400px;
+    padding: 40px;
+}
+.modal__holder .modal h3 {
+    padding-bottom: 30px;
+    text-align: left;
+    color: var(--grayBlue);
+    font-weight: bold;
+    font-size: 22px;
+}
+.modal__holder .modal p {
+    padding-bottom: 20px;
+    text-align: left;
+    color: var(--grayBlue);
+    line-height: 22px;
+}
+.modal__holder .modal #modal-no {
+    background-color: var(--grayBlue);
+    padding: 15px 20px;
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+}
+.modal__holder .modal #modal-yes {
+    background-color: var(--softRed);
+    padding: 15px 20px;
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+}
+.overlay {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    opacity: 0.5;
+    background-color: #000000;
+    display: none;
+    overflow-y: hidden;
+}
+#edit-comment {
+    margin-bottom: 40px;
+}
+#update {
+    margin-left: auto;
+    height: 40px;
+    padding: 0 20px;
+    border-radius: 7px;
+    color: var(--white);
+    background-color: var(--modBlue);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+}
+@media screen and (max-width: 1440px){
+    .container {
+        margin: 10px auto;
+        width: 90%;
+   }
+    .container .post{
+        background-color: var(--white);
+        padding: 20px;
+        border-radius: 10px;
+        display: flex;
+        width: 100%;
+        margin: 15px 0;
+        position: relative;
+   }
+    .post .desc p{
+        width: 100%;
+        padding-bottom: 40px;
+   }
+    .post .post__vote {
+        padding: 10px;
+        background-color: var(--vLightGray);
+        text-align: center;
+        border-radius: 10px;
+        height: 40px;
+        margin-right: 16px;
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+   }
+    .post .tool {
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+   }
+    .post .post__vote a, .post .post__vote p{
+        display: inline;
+        font-size: 17px;
+        padding: 5px 10px;
+   }
+    .post .post__vote a {
+        color: var(--lighBlue);
+   }
+    .post .post__vote a:hover {
+        color: var(--modBlue);
+   }
+    .post .post__vote p {
+        padding: 8px 0;
+        color: var(--modBlue);
+   }
+    .post .post__body {
+        color: var(--grayBlue);
+   }
+}
